@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text, FlatList } from 'react-native'
-import data from './data/data'
-import RepoItems from './RepoItems'
+import data from '../../data/data'
+import RepoItems from '../RepoItems'
 
-export default function Main () {
+export default function Repodata () {
   return (
     <FlatList
       data={data}

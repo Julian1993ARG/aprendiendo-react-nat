@@ -1,12 +1,22 @@
 import React from 'react'
 import { View } from 'react-native'
-import RepoData from './RepoData'
-import Constants from 'expo-constants'
+import RepoData from './components/RepoData'
+import AppBar from './components/AppBar'
+import { Route, Switch, Redirect } from 'react-router-native'
+import Login from './pages/Login'
 
-export default function Main () {
+const Main = () => {
   return (
-    <View style={{ marginTop: Constants.statusBarHeight, flexGrow: 1 }}>
-      <RepoData />
+    <View style={{ flex: 1 }}>
+      <AppBar />
+      <Switch>
+        <Route path='/' exact component={RepoData} />
+        <Route path='/signin' exact component={Login} />
+
+        <Redirect to='/' />
+      </Switch>
     </View>
   )
 }
+
+export default Main

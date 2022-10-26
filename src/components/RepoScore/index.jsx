@@ -1,6 +1,6 @@
 import React from 'react'
 import { View } from 'react-native'
-import TextStyle from './TextStyle'
+import TextStyle from '../TextStyle'
 
 // Esta funcion permite pasar de 1000 a 1k
 function parsThousands (value) {
